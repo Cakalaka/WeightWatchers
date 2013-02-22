@@ -9,12 +9,12 @@
 #include "WeightWatchers.h"
 
 double bodyMassIndex ( double height, double weight) {
-	double bmi = weight/(pow(height, 2));
+	double bmi = weight/(pow(height / 100, 2));
 	return bmi;
 }
 
 double bodySurfaceArea( double height, double weight) {
-	double bsa = sqrt((height * weight) / 360);
+	double bsa = sqrt((height * weight) / 3600);
 	return bsa;
 }
 
