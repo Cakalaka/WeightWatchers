@@ -10,6 +10,7 @@
 
 #include<iostream>
 #include<cmath>
+#include<string>
 
 using namespace std;
 using std::string;
@@ -17,7 +18,6 @@ using std::string;
 double bodyMassIndex ( double height, double weight);
 double bodySurfaceArea( double height, double weight);
 double leanMassIndex ( double height, double weight, char gender);
-void weightCheckM();
 
 
 
