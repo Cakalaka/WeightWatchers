@@ -6,9 +6,12 @@
  */
 
 #include<cmath>
+#include<string>
+
 #include "WeightWatchers.h"
 
 double bmi, bsa, lmi;
+string description;
 
 double bodyMassIndex ( double height, double weight) {
 	bmi = weight/(pow(height / 100, 2));
@@ -22,7 +25,7 @@ double bodySurfaceArea( double height, double weight) {
 
 double leanMassIndex ( double height, double weight, char gender) {
 	double heightBy100Sqrd, weightSqrd;
-	heightBy100Sqrd = heightBy100Sqrd = pow((100 * height), 2);
+	heightBy100Sqrd =  pow((100 * height), 2);
 	weightSqrd = pow(weight, 2);
 
 	if (gender == 'M'|| gender == 'm') {
@@ -33,5 +36,16 @@ double leanMassIndex ( double height, double weight, char gender) {
 	return lmi;
 }
 
-
-
+void weightCheckM(){
+	if (lmi < 20.7) {
+		description = "underweight";
+	} else if (lmi > 20.7 && lmi < 26.4){
+		description = "ideal weight";
+	} else if (lmi > 26.4 && lmi < 27.8){
+		description = "marginally overweight";
+	} else if (lmi > 27.8 && lmi < 31.1){
+		description = "overweight";
+	} else if (lmi > 31.1){
+		description = "obese";
+	}
+}

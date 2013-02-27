@@ -11,7 +11,7 @@
 
 int main() {
 	double weight, height;
-	char gender;
+	char gender, description;
 
 	height = 175;
 	weight = 77;
