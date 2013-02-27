@@ -8,18 +8,20 @@
 #include<cmath>
 #include "WeightWatchers.h"
 
+double bmi, bsa, lmi;
+
 double bodyMassIndex ( double height, double weight) {
-	double bmi = weight/(pow(height / 100, 2));
+	bmi = weight/(pow(height / 100, 2));
 	return bmi;
 }
 
 double bodySurfaceArea( double height, double weight) {
-	double bsa = sqrt((height * weight) / 3600);
+	bsa = sqrt((height * weight) / 3600);
 	return bsa;
 }
 
 double leanMassIndex ( double height, double weight, char gender) {
-	double heightBy100Sqrd, weightSqrd, lmi;
+	double heightBy100Sqrd, weightSqrd;
 	heightBy100Sqrd = heightBy100Sqrd = pow((100 * height), 2);
 	weightSqrd = pow(weight, 2);
 

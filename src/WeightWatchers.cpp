@@ -6,7 +6,6 @@
 // Description : Hello World in C++, Ansi-style
 //============================================================================
 
-#include <iostream>
 #include "WeightWatchers.h"
 
 
@@ -21,6 +20,7 @@ int main() {
 	cout << "Body surface area is " << bodySurfaceArea(height, weight) << endl;
 	cout << "Body mass index is " << bodyMassIndex(height, weight) << endl;
 	cout << "Lean mass index is " << leanMassIndex(height, weight, gender) << endl;
+	cout << "You are currently " << description << endl;
 
 	cout << "Hello Christopher" << endl; // prints Hello Christopher
 	return 0;
