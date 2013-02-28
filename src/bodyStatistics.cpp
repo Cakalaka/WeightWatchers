@@ -11,7 +11,7 @@
 #include "WeightWatchers.h"
 
 double bmi, bsa, lmi;
-string description;
+double heightBy100Sqrd, weightSqrd;
 
 //calculates your body mass index
 double bodyMassIndex ( double height, double weight) {
@@ -27,12 +27,20 @@ double bodySurfaceArea( double height, double weight) {
 
 //calculates your lean mass index
 double leanMassIndex ( double height, double weight, char gender) {
-	double heightBy100Sqrd, weightSqrd;
 	heightBy100Sqrd =  pow((100 * height), 2);
 	weightSqrd = pow(weight, 2);
-
 	if (gender == 'M'|| gender == 'm') {
 		lmi = (1.10 * weight) - (128 * (weightSqrd/heightBy100Sqrd));
+	} else if (gender =='F'|| gender == 'f') {
+		lmi = (1.07 * weight) - (148 * weightSqrd/heightBy100Sqrd);
+	}
+
+	return lmi;
+}
+
+string calculateDescription(double lmi, char gender) {
+	string description;
+	if (gender == 'M'|| gender == 'm') {
 		if (lmi < 20.7) {
 			description = "underweight";
 		} else if (lmi > 20.7 && lmi < 26.4){
@@ -45,7 +53,6 @@ double leanMassIndex ( double height, double weight, char gender) {
 			description = "obese";
 		}
 	} else if (gender =='F'|| gender == 'f') {
-		lmi = (1.07 * weight) - (148 * weightSqrd/heightBy100Sqrd);
 		if (lmi < 19.1){
 			description = "underweight";
 		} else if (lmi > 19.1 && lmi < 25.8){
@@ -58,5 +65,5 @@ double leanMassIndex ( double height, double weight, char gender) {
 			description = "obese";
 		}
 	}
-	return lmi;
+	return description;
 }
