@@ -27,7 +27,7 @@ double bodySurfaceArea( double height, double weight) {
 
 //calculates your lean mass index
 double leanMassIndex ( double height, double weight, char gender) {
-	heightBy100Sqrd =  pow((100 * height), 2);
+	heightBy100Sqrd =  pow((100 * (height/100)), 2);
 	weightSqrd = pow(weight, 2);
 	if (gender == 'M'|| gender == 'm') {
 		lmi = (1.10 * weight) - (128 * (weightSqrd/heightBy100Sqrd));

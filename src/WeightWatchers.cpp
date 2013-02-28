@@ -37,13 +37,11 @@ int main() {
 	weight = data.weight;
 	gender = data.gender;
 
-	cout << "Body surface area is " << bodySurfaceArea(height, weight) << endl;
-	cout << "Body mass index is " << bodyMassIndex(height, weight) << endl;
-	cout << "Lean mass index is " << leanMassIndex(height, weight, gender) << endl;
 	cout << "You are currently " << calculateDescription(leanMassIndex(height, weight, gender), gender) << endl;
-	//cout << "You are currently " << calculateDescription << endl;
+	cout << "your body surface area is " << bodySurfaceArea(height, weight) << endl;
+	cout << "your body mass index is " << bodyMassIndex(height, weight) << endl;
+	cout << "your lean mass index is " << leanMassIndex(height, weight, gender) << endl;
 
-	cout << "Hello Christopher" << endl; // prints Hello Christopher
 	return 0;
 }
 
