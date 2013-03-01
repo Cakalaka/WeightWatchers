@@ -11,6 +11,8 @@
 #include<iostream>
 #include<cmath>
 #include<string>
+#include<valarray>
+#include<random>
 
 using namespace std;
 using std::string;
@@ -19,6 +21,7 @@ double bodyMassIndex ( double height, double weight);
 double bodySurfaceArea( double height, double weight);
 double leanMassIndex ( double height, double weight, char gender);
 string calculateDescription(double lmi, char gender);
+void display();
 
 
 

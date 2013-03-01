@@ -12,7 +12,6 @@
 int main() {
 	double height, weight;
 	char gender;
-	//string description;
 
 	struct personData{
 		string name;
@@ -37,10 +36,8 @@ int main() {
 	weight = data.weight;
 	gender = data.gender;
 
-	cout << "You are currently " << calculateDescription(leanMassIndex(height, weight, gender), gender) << endl;
-	cout << "your body surface area is " << bodySurfaceArea(height, weight) << endl;
-	cout << "your body mass index is " << bodyMassIndex(height, weight) << endl;
-	cout << "your lean mass index is " << leanMassIndex(height, weight, gender) << endl;
+	client newClient;
+	newClient.display();
 
 	return 0;
 }

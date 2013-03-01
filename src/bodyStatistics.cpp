@@ -38,30 +38,30 @@ double leanMassIndex ( double height, double weight, char gender) {
 	return lmi;
 }
 
-string calculateDescription(double lmi, char gender) {
+string calculateDescription(double bmi, char gender) {
 	string description;
 	if (gender == 'M'|| gender == 'm') {
-		if (lmi < 20.7) {
+		if (bmi < 20.7) {
 			description = "underweight";
-		} else if (lmi > 20.7 && lmi < 26.4){
+		} else if (bmi > 20.7 && bmi < 26.4){
 			description = "ideal weight";
-		} else if (lmi > 26.4 && lmi < 27.8){
+		} else if (bmi > 26.4 && bmi < 27.8){
 			description = "marginally overweight";
-		} else if (lmi > 27.8 && lmi < 31.1){
+		} else if (bmi > 27.8 && bmi < 31.1){
 			description = "overweight";
-		} else if (lmi > 31.1){
+		} else if (bmi > 31.1){
 			description = "obese";
 		}
 	} else if (gender =='F'|| gender == 'f') {
-		if (lmi < 19.1){
+		if (bmi < 19.1){
 			description = "underweight";
-		} else if (lmi > 19.1 && lmi < 25.8){
+		} else if (bmi > 19.1 && bmi < 25.8){
 			description = "ideal weight";
-		} else if (lmi > 25.8 && lmi < 27.3 ){
+		} else if (bmi > 25.8 && bmi < 27.3 ){
 			description = "marginally overweight";
-		} else if (lmi > 27.3 && lmi < 32.3){
+		} else if (bmi > 27.3 && bmi < 32.3){
 			description = "overweight";
-		} else if (lmi > 32.3){
+		} else if (bmi > 32.3){
 			description = "obese";
 		}
 	}
