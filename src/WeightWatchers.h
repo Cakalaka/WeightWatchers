@@ -13,6 +13,7 @@
 #include<string>
 #include<valarray>
 #include<random>
+#include"client.h"
 
 using namespace std;
 using std::string;

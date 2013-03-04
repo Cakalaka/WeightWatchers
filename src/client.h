@@ -10,6 +10,9 @@
 
 namespace std {
 
+#include<iostream>
+#include<string>
+
 class client {
 private:
 	string name;

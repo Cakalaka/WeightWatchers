@@ -36,8 +36,8 @@ int main() {
 	weight = data.weight;
 	gender = data.gender;
 
-	client newClient;
-	newClient.display();
+	client client;
+	client.display();
 
 	return 0;
 }
