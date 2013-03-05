@@ -10,13 +10,9 @@
 
 #include<iostream>
 #include<cmath>
-#include<string>
-#include<valarray>
-#include<random>
 #include"client.h"
 
 using namespace std;
-using std::string;
 
 double bodyMassIndex ( double height, double weight);
 double bodySurfaceArea( double height, double weight);

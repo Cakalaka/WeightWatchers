@@ -8,7 +8,7 @@
 #include "client.h"
 #include "WeightWatchers.h"
 
-namespace std {
+using namespace std;
 
 client::client() {
 	// TODO Auto-generated constructor stub
@@ -19,7 +19,7 @@ client::~client() {
 	// TODO Auto-generated destructor stub
 }
 
-} /* namespace std */
+/* namespace std */
 
 
 void client::display(){

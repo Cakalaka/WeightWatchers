@@ -5,9 +5,6 @@
  *      Author: christopher
  */
 
-#include<cmath>
-#include<string>
-
 #include "WeightWatchers.h"
 
 double bmi, bsa, lmi;

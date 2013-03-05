@@ -8,7 +8,7 @@
 #ifndef CLIENT_H_
 #define CLIENT_H_
 
-namespace std {
+using namespace std;
 
 #include<iostream>
 #include<string>
@@ -25,5 +25,5 @@ public:
 	void display();
 };
 
-} /* namespace std */
+/* namespace std */
 #endif /* CLIENT_H_ */
