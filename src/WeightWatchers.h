@@ -20,12 +20,12 @@ public:
 	virtual ~WeightWatchers();
 	double height, weight;
 	char gender;
+	double bodyMassIndex ( double height, double weight);
+	double bodySurfaceArea( double height, double weight);
+	double leanMassIndex ( double height, double weight, char gender);
+	string calculateDescription(double lmi, char gender);
 };
 
-double bodyMassIndex ( double height, double weight);
-double bodySurfaceArea( double height, double weight);
-double leanMassIndex ( double height, double weight, char gender);
-string calculateDescription(double lmi, char gender);
 void display();
 struct personData{
 		string name;
@@ -33,8 +33,5 @@ struct personData{
 		double weight;
 		char gender;
 	};
-
-
-
 
 #endif /* WEIGHTWATCHERS_H_ */

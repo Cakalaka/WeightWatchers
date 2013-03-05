@@ -10,8 +10,6 @@
 
 using namespace std;
 
-#include<iostream>
-#include<string>
 #include"WeightWatchers.h"
 
 class client {

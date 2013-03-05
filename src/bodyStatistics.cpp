@@ -11,19 +11,19 @@ double bmi, bsa, lmi;
 double heightBy100Sqrd, weightSqrd;
 
 //calculates your body mass index
-double bodyMassIndex ( double height, double weight) {
+double WeightWatchers::bodyMassIndex ( double height, double weight) {
 	bmi = weight/(pow(height / 100, 2));
 	return bmi;
 }
 
 //calculates your body surface area
-double bodySurfaceArea( double height, double weight) {
+double WeightWatchers::bodySurfaceArea( double height, double weight) {
 	bsa = sqrt((height * weight) / 3600);
 	return bsa;
 }
 
 //calculates your lean mass index
-double leanMassIndex ( double height, double weight, char gender) {
+double WeightWatchers::leanMassIndex ( double height, double weight, char gender) {
 	heightBy100Sqrd =  pow((100 * (height/100)), 2);
 	weightSqrd = pow(weight, 2);
 	if (gender == 'M'|| gender == 'm') {
@@ -35,7 +35,7 @@ double leanMassIndex ( double height, double weight, char gender) {
 	return lmi;
 }
 
-string calculateDescription(double bmi, char gender) {
+string WeightWatchers::calculateDescription(double bmi, char gender) {
 	string description;
 	if (gender == 'M'|| gender == 'm') {
 		if (bmi < 20.7) {

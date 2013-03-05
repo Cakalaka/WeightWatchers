@@ -21,18 +21,13 @@ client::~client() {
 
 /* namespace std */
 
-void client::getGender(){
-	WeightWatchers * crazyPointer = new WeightWatchers();
-	gender = crazyPointer->gender;
-	//return gender;
-}
 void client::display(){
-	WeightWatchers * crazyPointer = new WeightWatchers();
+	WeightWatchers * methods = new WeightWatchers();
 	cout << height << endl;
 	cout << weight << endl;
 	cout << gender << endl;
-	cout << "You are currently " << calculateDescription(leanMassIndex(height, weight, gender), gender) << endl;
-	cout << "your body surface area is " << bodySurfaceArea(height, weight) << endl;
-	cout << "your body mass index is " << bodyMassIndex(height, weight) << endl;
-	cout << "your lean mass index is " << leanMassIndex(height, weight, gender) << endl;
+	cout << "You are currently " << methods->calculateDescription(methods->leanMassIndex(height, weight, gender), gender) << endl;
+	cout << "your body surface area is " << methods->bodySurfaceArea(height, weight) << endl;
+	cout << "your body mass index is " << methods->bodyMassIndex(height, weight) << endl;
+	cout << "your lean mass index is " << methods->leanMassIndex(height, weight, gender) << endl;
 }
