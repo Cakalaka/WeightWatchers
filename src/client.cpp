@@ -2,11 +2,11 @@
  * client.cpp
  *
  *  Created on: 1 Mar 2013
- *      Author: christopher
+ *      Author: Christopher
  */
 
-#include "client.h"
 #include "WeightWatchers.h"
+#include "client.h"
 
 using namespace std;
 
@@ -21,8 +21,16 @@ client::~client() {
 
 /* namespace std */
 
-
+void client::getGender(){
+	WeightWatchers * crazyPointer = new WeightWatchers();
+	gender = crazyPointer->gender;
+	//return gender;
+}
 void client::display(){
+	WeightWatchers * crazyPointer = new WeightWatchers();
+	cout << height << endl;
+	cout << weight << endl;
+	cout << gender << endl;
 	cout << "You are currently " << calculateDescription(leanMassIndex(height, weight, gender), gender) << endl;
 	cout << "your body surface area is " << bodySurfaceArea(height, weight) << endl;
 	cout << "your body mass index is " << bodyMassIndex(height, weight) << endl;

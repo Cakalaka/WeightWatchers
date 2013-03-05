@@ -2,7 +2,7 @@
  * bodyStatistics.cpp
  *
  *  Created on: 12 Feb 2013
- *      Author: christopher
+ *      Author: Christopher
  */
 
 #include "WeightWatchers.h"

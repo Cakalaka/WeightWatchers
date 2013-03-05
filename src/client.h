@@ -2,7 +2,7 @@
  * client.h
  *
  *  Created on: 1 Mar 2013
- *      Author: christopher
+ *      Author: Christopher
  */
 
 #ifndef CLIENT_H_
@@ -12,16 +12,17 @@ using namespace std;
 
 #include<iostream>
 #include<string>
+#include"WeightWatchers.h"
 
 class client {
-private:
+public:
 	string name;
 	double height;
 	double weight;
 	char gender;
-public:
 	client();
 	virtual ~client();
+	void getGender();
 	void display();
 };
 

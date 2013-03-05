@@ -10,16 +10,7 @@
 
 
 int main() {
-	double height, weight;
-	char gender;
-
-	struct personData{
-		string name;
-		double height;
-		double weight;
-		char gender;
-	};
-
+	client * pWeight = new client();
 	personData data;
 
 	cout << "Please enter your name: ";
@@ -32,14 +23,20 @@ int main() {
 	cin >> data.gender;
 	cout << endl;
 
-	height = data.height;
-	weight = data.weight;
-	gender = data.gender;
+	pWeight->height = data.height;
+	pWeight->weight = data.weight;
+	pWeight->gender = data.gender;
 
-	client client;
-	client.display();
+	pWeight->display();
 
 	return 0;
 }
 
+WeightWatchers::WeightWatchers(){
+	height = 0;
+	weight = 0;
+}
 
+WeightWatchers::~WeightWatchers(){
+
+}
