@@ -22,6 +22,7 @@ public:
 	virtual ~client();
 	void getGender();
 	void display();
+	void clientArrives();
 };
 
 /* namespace std */

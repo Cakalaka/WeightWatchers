@@ -22,12 +22,30 @@ client::~client() {
 /* namespace std */
 
 void client::display(){
-	WeightWatchers * methods = new WeightWatchers();
+	WeightWatchers * statistics = new WeightWatchers();
 	cout << height << endl;
 	cout << weight << endl;
 	cout << gender << endl;
-	cout << "You are currently " << methods->calculateDescription(methods->leanMassIndex(height, weight, gender), gender) << endl;
-	cout << "your body surface area is " << methods->bodySurfaceArea(height, weight) << endl;
-	cout << "your body mass index is " << methods->bodyMassIndex(height, weight) << endl;
-	cout << "your lean mass index is " << methods->leanMassIndex(height, weight, gender) << endl;
+	cout << "You are currently " << statistics->calculateDescription(statistics->leanMassIndex(height, weight, gender), gender) << endl;
+	cout << "your body surface area is " << statistics->bodySurfaceArea(height, weight) << endl;
+	cout << "your body mass index is " << statistics->bodyMassIndex(height, weight) << endl;
+	cout << "your lean mass index is " << statistics->leanMassIndex(height, weight, gender) << endl;
+}
+
+void client::clientArrives(){
+	int customerArrival = 10;
+	double arrivalProbability = 1 / static_cast<double>(customerArrival);
+	double poissonValue = std::exp(-arrivalProbability);
+	int firstTime = 0;
+	int secondTime = 9;
+
+	cout << "probability of arrival is: " << arrivalProbability << endl;
+
+	while(customerArrival < 101){
+		int throwDice = rand() % customerArrival;
+		cout << "Time: " << firstTime << " - " << secondTime << " customers: " << throwDice << endl;
+		customerArrival = customerArrival + 10;
+		firstTime = secondTime + 1;
+		secondTime = secondTime + 10;
+	}
 }

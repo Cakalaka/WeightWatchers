@@ -13,21 +13,22 @@ int main() {
 	client * pWeight = new client();
 	personData data;
 
-	cout << "Please enter your name: ";
-	cin >> data.name;
-	cout << "Hello " << data.name << ", please enter your height (in centimeters): ";
-	cin >> data.height;
-	cout << "Please enter you weight (in kilograms): ";
-	cin >> data.weight;
-	cout << "Please enter your gender (m/f): ";
-	cin >> data.gender;
-	cout << endl;
-
-	pWeight->height = data.height;
-	pWeight->weight = data.weight;
+//	cout << "Please enter your name: ";
+//	cin >> data.name;
+//	cout << "Hello " << data.name << ", please enter your height (in centimeters): ";
+//	cin >> data.height;
+//	cout << "Please enter you weight (in kilograms): ";
+//	cin >> data.weight;
+//	cout << "Please enter your gender (m/f): ";
+//	cin >> data.gender;
+//	cout << endl;
+//
+//	pWeight->height = data.height;
+//	pWeight->weight = data.weight;
 	pWeight->gender = data.gender;
 
-	pWeight->display();
+//	pWeight->display();
+	pWeight->clientArrives();
 
 	return 0;
 }
