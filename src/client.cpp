@@ -39,7 +39,8 @@ void client::clientArrives(){
 	int firstTime = 0;
 	int secondTime = 9;
 
-	cout << "probability of arrival is: " << arrivalProbability << endl;
+	cout << "Probability of arrival is: " << arrivalProbability << endl;
+	cout << "Poisson Value is: " << poissonValue << endl;
 
 	while(customerArrival < 101){
 		int throwDice = rand() % customerArrival;
