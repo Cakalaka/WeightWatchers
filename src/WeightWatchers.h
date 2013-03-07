@@ -11,6 +11,7 @@
 #include<iostream>
 #include<cmath>
 #include<stdlib.h>
+#include<time.h>
 #include"client.h"
 
 using namespace std;

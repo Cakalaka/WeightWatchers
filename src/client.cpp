@@ -40,39 +40,58 @@ void client::clientArrives(){
 	int secondTime = 9;
 	int arrivalIntervals = 0;
 	int customersPerMinute[10];
+	int x = 0;
+	int y = 0;
+	int min = 8;
+	int max = 12;
+
+	while (x < 10){
+		customersPerMinute[x] = 0;
+		x++;
+	}
+
 
 	cout << "Probability of arrival is: " << arrivalProbability << endl;
 	cout << "Poisson Value is: " << poissonValue << endl;
-
+	srand(time(NULL));
 	while(arrivalIntervals < 101){
 		int throwDice = rand() % customerArrival;
-		cout << "Customer arrived at time: " << throwDice << endl;
-		customerArrival = customerArrival + 10;
 		if (throwDice < 10){
-			customersPerMinute[0] = customersPerMinute[0] + 1;
-		}else if (throwDice > 9 && throwDice < 20){
-			customersPerMinute[1] = customersPerMinute[1] + 1;
-		}else if (throwDice > 19 && throwDice < 30){
-			customersPerMinute[2] = customersPerMinute[2] + 1;
-		}else if (throwDice > 29 && throwDice < 40){
-			customersPerMinute[3] = customersPerMinute[3] + 1;
-		}else if (throwDice > 39 && throwDice < 50){
-			customersPerMinute[4] = customersPerMinute[4] + 1;
-		}else if (throwDice > 49 && throwDice < 60){
-			customersPerMinute[5] = customersPerMinute[5] + 1;
-		}else if (throwDice > 59 && throwDice <70){
-			customersPerMinute[6] = customersPerMinute[6] + 1;
-		}else if(throwDice > 69 && throwDice < 80){
-			customersPerMinute[7] = customersPerMinute[7] + 1;
-		}else if (throwDice > 79 && throwDice < 90){
-			customersPerMinute[8] = customersPerMinute[8] + 1;
-		}else if (throwDice > 89 && throwDice < 100){
-			customersPerMinute[9] = customersPerMinute[9] +1;
+			cout << "Customer arrived at time: 0" << throwDice << endl;
+		} else {
+			cout << "Customer arrived at time: " << throwDice << endl;
 		}
+		customerArrival = customerArrival + ((rand()/RAND_MAX*(max-min) + min));
+		if (throwDice < 10){
+			y = 0;
+		}else if (throwDice > 9 && throwDice < 20){
+			y = 1;
+		}else if (throwDice > 19 && throwDice < 30){
+			y = 2;
+		}else if (throwDice > 29 && throwDice < 40){
+			y = 3;
+		}else if (throwDice > 39 && throwDice < 50){
+			y = 4;
+		}else if (throwDice > 49 && throwDice < 60){
+			y = 5;
+		}else if (throwDice > 59 && throwDice < 70){
+			y = 6;
+		}else if(throwDice > 69 && throwDice < 80){
+			y = 7;
+		}else if (throwDice > 79 && throwDice < 90){
+			y = 8;
+		}else if (throwDice > 89 && throwDice < 100){
+			y = 9;
+		}
+		customersPerMinute[y] += 1;
 		arrivalIntervals = arrivalIntervals + 10;
 	}
-	for(int i=0; i>10; i++){
-		cout << "Time: " << firstTime << "- " << secondTime << "Customers: " << customersPerMinute[i] << endl;
+	for(int i=0; i<10; i++){
+		if (firstTime < 10 && secondTime < 10){
+			cout << "Time: 0" << firstTime << " - 0" << secondTime << " Customers: " << customersPerMinute[i] << endl;
+		} else {
+			cout << "Time: " << firstTime << " - " << secondTime << " Customers: " << customersPerMinute[i] << endl;
+		}
 		firstTime = secondTime + 1;
 		secondTime = secondTime + 10;
 	}
