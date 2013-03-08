@@ -23,9 +23,6 @@ client::~client() {
 
 void client::display(){
 	WeightWatchers * statistics = new WeightWatchers();
-	cout << height << endl;
-	cout << weight << endl;
-	cout << gender << endl;
 	cout << "You are currently " << statistics->calculateDescription(statistics->bodyMassIndex(height, weight), gender) << endl;
 	cout << "your body surface area is " << statistics->bodySurfaceArea(height, weight) << endl;
 	cout << "your body mass index is " << statistics->bodyMassIndex(height, weight) << endl;
