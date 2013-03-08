@@ -35,30 +35,31 @@ double WeightWatchers::leanMassIndex ( double height, double weight, char gender
 	return lmi;
 }
 
+//calculates whether you are obese, overweight, etc based on the result of your bmi
 string WeightWatchers::calculateDescription(double bmi, char gender) {
 	string description;
 	if (gender == 'M'|| gender == 'm') {
 		if (bmi < 20.7) {
 			description = "underweight";
-		} else if (bmi > 20.7 && bmi < 26.4){
+		} else if (bmi >= 20.7 && bmi < 26.4){
 			description = "ideal weight";
-		} else if (bmi > 26.4 && bmi < 27.8){
+		} else if (bmi >= 26.4 && bmi < 27.8){
 			description = "marginally overweight";
-		} else if (bmi > 27.8 && bmi < 31.1){
+		} else if (bmi >= 27.8 && bmi < 31.1){
 			description = "overweight";
-		} else if (bmi > 31.1){
+		} else if (bmi >= 31.1){
 			description = "obese";
 		}
 	} else if (gender =='F'|| gender == 'f') {
 		if (bmi < 19.1){
 			description = "underweight";
-		} else if (bmi > 19.1 && bmi < 25.8){
+		} else if (bmi >= 19.1 && bmi < 25.8){
 			description = "ideal weight";
-		} else if (bmi > 25.8 && bmi < 27.3 ){
+		} else if (bmi >= 25.8 && bmi < 27.3 ){
 			description = "marginally overweight";
-		} else if (bmi > 27.3 && bmi < 32.3){
+		} else if (bmi >= 27.3 && bmi < 32.3){
 			description = "overweight";
-		} else if (bmi > 32.3){
+		} else if (bmi >= 32.3){
 			description = "obese";
 		}
 	}
